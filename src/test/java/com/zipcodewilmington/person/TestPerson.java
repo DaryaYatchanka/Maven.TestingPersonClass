@@ -2,6 +2,7 @@ package com.zipcodewilmington.person;
 
 import org.junit.Assert;
 import org.junit.Test;
+import java.util.Date;
 
 /**
  * Created by leon on 2/12/18.
@@ -95,4 +96,40 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+
+
+    @Test
+    public void testSetAddress(){
+        Person person = new Person();
+        String expected = "356 Market St, Wilmington, DE";
+
+        person.setAddress(expected);
+
+        String actual = person.getAddress();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetDateOfBirth(){
+        Person person = new Person();
+        Date date = new Date(1991, 9,23);
+
+        person.setDateOfBirth(date);
+
+        Date actual = person.getDateOfBirth();
+        Assert.assertEquals(date, actual);
+    }
+
+    @Test
+     public void testSetPhoneNumber(){
+        Person person = new Person();
+        Integer expected = 305546789;
+
+        person.setPhoneNumber(expected);
+
+        Integer actual = person.getPhoneNumber();
+        Assert.assertEquals(expected, actual);
+    }
+
 }

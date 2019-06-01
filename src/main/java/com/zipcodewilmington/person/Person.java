@@ -1,5 +1,7 @@
 package com.zipcodewilmington.person;
 
+import com.sun.xml.internal.ws.encoding.DataSourceStreamingDataHandler;
+
 import java.util.Date;
 
 /**
@@ -13,6 +15,7 @@ public class Person {
     private int phoneNumber;
 
     public Person() {
+
     }
 
     public Person(int age) {
@@ -41,14 +44,16 @@ public class Person {
     }
 
     public void setAddress(String address) {
+
         this.address = address;
     }
 
     public void setDateOfBirth(Date dateOfBirth){
+
         this.dateOfBirth = dateOfBirth;
     }
 
-    public void getPhoneNumber(int phoneNumber){
+    public void setPhoneNumber(int phoneNumber){
         this.phoneNumber = phoneNumber;
     }
     public String getName() {
@@ -57,6 +62,7 @@ public class Person {
     }
 
     public Integer getAge() {
+
         return this.age;
     }
 
@@ -65,6 +71,7 @@ public class Person {
     }
 
     public Date getDateOfBirth(){
+
         return this.dateOfBirth;
     }
 
